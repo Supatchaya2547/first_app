@@ -317,67 +317,99 @@ class MyApp extends StatelessWidget {
 // }
 
 // Exercise 3
+// class MyWidget extends StatelessWidget {
+//   const MyWidget({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Color Layout', style: TextStyle(color: Colors.white)),
+//         backgroundColor: const Color.fromARGB(255, 54, 72, 208),
+//       ),
+
+//       body: Center(
+//         child: Stack(
+//           children: [
+//             Container(
+//               height: 300,
+//               width: 120,
+//               decoration: BoxDecoration(
+//                 color: Colors.black,
+//                 borderRadius: BorderRadius.circular(15),
+//               ),
+//             ),
+//             Positioned(
+//               top: 10,
+//               right: 20,
+//               child: Container(
+//                 height: 80,
+//                 width: 80,
+//                 decoration: BoxDecoration(
+//                   shape: BoxShape.circle,
+//                   color: Colors.red,
+//                 ),
+//               ),
+//             ),
+//             Positioned(
+//               top: 110,
+//               right: 20,
+//               child: Container(
+//                 height: 80,
+//                 width: 80,
+//                 decoration: BoxDecoration(
+//                   shape: BoxShape.circle,
+//                   color: Colors.yellow,
+//                 ),
+//               ),
+//             ),
+//             Positioned(
+//               top: 210,
+//               right: 20,
+//               child: Container(
+//                 height: 80,
+//                 width: 80,
+//                 decoration: BoxDecoration(
+//                   shape: BoxShape.circle,
+//                   color: Colors.green,
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Color Layout', style: TextStyle(color: Colors.white)),
-        backgroundColor: const Color.fromARGB(255, 54, 72, 208),
-      ),
-
+      backgroundColor: Colors.grey,
       body: Center(
-        child: Stack(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 300,
-              width: 120,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(15),
-              ),
-            ),
-            Positioned(
-              top: 10,
-              right: 20,
-              child: Container(
-                height: 80,
-                width: 80,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.red,
-                ),
-              ),
-            ),
-            Positioned(
-              top: 110,
-              right: 20,
-              child: Container(
-                height: 80,
-                width: 80,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.yellow,
-                ),
-              ),
-            ),
-            Positioned(
-              top: 210,
-              right: 20,
-              child: Container(
-                height: 80,
-                width: 80,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.green,
-                ),
-              ),
-            ),
+            Image.network("https://dt.lnwfile.com/_/dt/_raw/8a/y8/nr.jpg", height: 150,width: 150),
+            SizedBox(height: 50,),
+            Image.asset('dog.jpg'),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
+              onPressed: (){
+                print('Clicked!');
+              }, 
+              child: Text('Click me!')),
+              TextButton(
+                onPressed: (){
+                  print('Text Button');
+                }, 
+                child: Text('Click me!!')),
           ],
         ),
       ),
-    );
+      );
   }
 }
