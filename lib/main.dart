@@ -1,5 +1,12 @@
+import 'package:first_app/api_pm25/api_pm25.dart';
 import 'package:first_app/assignment1.dart';
+import 'package:first_app/counter_widget.dart';
+import 'package:first_app/form_example/form_example1.dart';
+import 'package:first_app/greeting_widget.dart';
+import 'package:first_app/navigation_example/first_page.dart';
+import 'package:first_app/navigation_example/second_page.dart';
 import 'package:first_app/week_3.dart';
+import 'package:first_app/widget_ass.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,10 +23,13 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 58, 148, 183),
+          seedColor: const Color.fromARGB(255, 241, 233, 199),
         ),
+        useMaterial3: true,
       ),
-      home: Assignment1(),
+      debugShowCheckedModeBanner: false,
+     
+      home: ApiPm25(),
     );
   }
 }
