@@ -12,7 +12,7 @@ class _ProfileCustomWidgetState extends State<ProfileCustomWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Profile Widget')),
+      appBar: AppBar(title: Text('Profile Widget',)),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
